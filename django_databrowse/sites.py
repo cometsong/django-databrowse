@@ -6,7 +6,6 @@ except ImportError, e:
     from django.db.models import get_model
 
 from django.shortcuts import render_to_response
-from django.template import RequestContext
 from django.utils.safestring import mark_safe
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -107,7 +106,7 @@ class ModelDatabrowse(object):
                 'plugin_html': html_snippets,
                 'object_list': obj_list_page,
                 'items_per_page': items_per_page,
-            }, context_instance=RequestContext(request)
+            }, {}
         )
 
 
@@ -168,7 +167,7 @@ class DatabrowseSite(object):
         return render_to_response(
             'databrowse/homepage.html',
             {'model_list': m_list, 'root_url': self.root_url},
-            context_instance=RequestContext(request)
+            {}
         )
 
     def model_page(self, request, app_label, model_name, rest_of_url=None):
