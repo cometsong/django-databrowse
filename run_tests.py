@@ -22,7 +22,11 @@ settings.configure(
         'django_databrowse'
     ),
     MIDDLEWARE_CLASSES=[],
-    ROOT_URLCONF='test_urls'
+    ROOT_URLCONF='test_urls',
+    TEMPLATES=[{
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    }]
 )
 from django.test.runner import DiscoverRunner
 
