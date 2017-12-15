@@ -1,8 +1,15 @@
+2017.12.15 2017.12.15
+====================
+----
+
+* Django 1.10 fixes -- Remove RequestContext
+
 2017.02.14 2017.02.14
 ====================
 ----
 
 * Fix: Adding RequestContext to render_to_response calls
+
 
 2016.2.26 2016.02.26
 ====================
