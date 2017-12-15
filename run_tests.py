@@ -4,9 +4,6 @@ import django
 from django.conf import settings
 
 
-DJANGO_VERSION = float('.'.join([str(i) for i in django.VERSION[0:2]]))
-DIR_NAME = os.path.dirname(__file__)
-
 settings.configure(
     DEBUG=True,
     DATABASES={
