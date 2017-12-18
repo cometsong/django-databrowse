@@ -147,6 +147,19 @@ class EasyInstance(object):
                  self.model.model._meta.many_to_many:
             yield EasyInstanceField(self.model, self, f)
 
+    def get_all_related_objects(self):
+        return [
+            f for f in self.model.model._meta.get_fields()
+            if (f.one_to_many or f.one_to_one)
+            and f.auto_created and not f.concrete
+            ]
+
+    def get_all_related_many_to_many_objects(self):
+        return [
+            f for f in self.model.model._meta.get_fields(include_hidden=True)
+            if f.many_to_many and f.auto_created
+            ]
+
     def related_objects(self):
         """
         Generator that yields dictionaries of all models that have this
@@ -154,8 +167,8 @@ class EasyInstance(object):
         lists of related objects.
         """
         for rel_object in \
-            self.model.model._meta.get_all_related_objects() +\
-            self.model.model._meta.get_all_related_many_to_many_objects():
+            self.get_all_related_objects() +\
+            self.get_all_related_many_to_many_objects():
             if rel_object.model not in self.model.model_list:
                 continue # Skip models that aren't in the model_list
             em = EasyModel(self.model.site, rel_object.model)
