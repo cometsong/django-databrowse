@@ -1,8 +1,15 @@
+2017.12.18 2017.12.18
+====================
+----
+
+* Django 1.10 fixes -- Substitute deprecated model functionality
+
 2017.12.15 2017.12.15
 ====================
 ----
 
 * Django 1.10 fixes -- Remove RequestContext
+
 
 2017.02.14 2017.02.14
 ====================
