@@ -107,7 +107,7 @@ class ModelDatabrowse(object):
                 'plugin_html': html_snippets,
                 'object_list': obj_list_page,
                 'items_per_page': items_per_page,
-            }
+            }, {}
         )
 
 
@@ -167,7 +167,7 @@ class DatabrowseSite(object):
         m_list = [EasyModel(self, m) for m in self.registry.keys()]
         return render(request,
             'databrowse/homepage.html',
-            {'model_list': m_list, 'root_url': self.root_url},
+            {'model_list': m_list, 'root_url': self.root_url}
         )
 
     def model_page(self, request, app_label, model_name, rest_of_url=None):

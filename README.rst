@@ -2,9 +2,8 @@
 Django Databrowse
 =================
 
-.. image:: https://travis-ci.org/Alir3z4/django-databrowse.png
-   :alt: travis-cli tests status for django-databrowse
-   :target: https://travis-ci.org/Alir3z4/django-databrowse
+.. image:: https://travis-ci.org/ccnmtl/django-databrowse.svg?branch=master
+    :target: https://travis-ci.org/ccnmtl/django-databrowse
 
 .. contents:: Table of contents
 

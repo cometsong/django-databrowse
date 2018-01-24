@@ -1,3 +1,24 @@
+=======
+2017.12.18 2017.12.18
+====================
+----
+
+* Django 1.10 fixes -- Substitute deprecated model functionality
+
+2017.12.15 2017.12.15
+====================
+----
+
+* Django 1.10 fixes -- Remove RequestContext
+
+
+2017.02.14 2017.02.14
+====================
+----
+
+* Fix: Adding RequestContext to render_to_response calls
+
+
 2016.3.16 2016.03.16
 ====================
 ----

@@ -15,3 +15,5 @@ logs/
 src/
 media/
 django_databrowse_project/
+.project
+.pydevproject

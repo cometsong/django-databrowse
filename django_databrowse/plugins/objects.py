@@ -32,5 +32,5 @@ class ObjectDetailPlugin(DatabrowsePlugin):
             {
                 'object': obj,
                 'root_url': model_databrowse.site.root_url
-            }
+            }, {}
         )

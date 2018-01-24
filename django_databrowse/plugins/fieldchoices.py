@@ -94,7 +94,7 @@ class FieldChoicePlugin(DatabrowsePlugin):
                 'root_url': self.site.root_url,
                 'model': easy_model,
                 'field_list': field_list
-            }
+            }, {}
         )
 
     def field_view(self, request, field, value=None):
@@ -136,7 +136,7 @@ class FieldChoicePlugin(DatabrowsePlugin):
                     'value': value,
                     'object_list': obj_list_page,
                     'items_per_page': items_per_page,
-                }
+                }, {}
             )
 
         return render(request,
@@ -147,5 +147,5 @@ class FieldChoicePlugin(DatabrowsePlugin):
                 'field': easy_field,
                 'object_list': obj_list_page,
                 'items_per_page': items_per_page,
-            }
+            }, {}
         )

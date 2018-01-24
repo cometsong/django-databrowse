@@ -11,7 +11,7 @@ def choice_list(request, app_label, model_name, field_name, models):
     m, f = lookup_field(app_label, model_name, field_name, models)
     return render(request,
         'databrowse/choice_list.html',
-        {'model': m, 'field': f},
+        {'model': m, 'field': f}
     )
 
 def choice_detail(request, app_label, model_name, field_name,
@@ -48,5 +48,5 @@ def choice_detail(request, app_label, model_name, field_name,
             'value': label,
             'object_list': obj_list_page,
             'items_per_page': items_per_page,
-        }
+        }, {}
     )
