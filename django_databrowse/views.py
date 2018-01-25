@@ -48,5 +48,5 @@ def choice_detail(request, app_label, model_name, field_name,
             'value': label,
             'object_list': obj_list_page,
             'items_per_page': items_per_page,
-        }, {}
+        }
     )

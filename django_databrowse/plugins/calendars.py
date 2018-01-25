@@ -115,7 +115,7 @@ class CalendarPlugin(DatabrowsePlugin):
                 'root_url': self.site.root_url,
                 'model': easy_model,
                 'field_list': field_list
-            }, {}
+            }
         )
 
     def calendar_view(self, request, field, year=None, month=None, day=None):

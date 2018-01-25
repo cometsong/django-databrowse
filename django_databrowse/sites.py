@@ -107,7 +107,7 @@ class ModelDatabrowse(object):
                 'plugin_html': html_snippets,
                 'object_list': obj_list_page,
                 'items_per_page': items_per_page,
-            }, {}
+            }
         )
 
 
